@@ -10,7 +10,23 @@ public class Bucles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (num1 = 5; num1 < 20; num1++) ;
+        num1 = 1;
+        while(num1 <= 10)
+        {
+            if (num1 < 5)
+            {
+                print("el numero es menor que 5");
+            }
+            else if (num1 >=5 && num1 <= 10)
+            {
+                print("El numero es " + num1);
+            }
+            else
+            {
+                print("El numero es 10");
+            }
+            num1++;
+        }
         
     }
 
