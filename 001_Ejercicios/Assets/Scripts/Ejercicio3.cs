@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class Ejercicio3 : MonoBehaviour
 {
-    public int vida;
+    int vidas;
     // Start is called before the first frame update
     void Start()
     {
-        Saludar("Jairo", 19);
-        Saludar("Milena", 22);
-        Saludar("Noe", 21);
-    
+        vidas = 10;
+
+        //Obtengo el resultado de llamara al metodo y actño en consecuencia
+        if (EsPar(vidas) == true) //Cuando pasamos una booleana a un if no es necesario el ==
+        {
+            print("Es par");
+        }
+        else
+        {
+            print("Es impar");
+        }
+
     }
 
     // Update is called once per frame
@@ -19,9 +27,21 @@ public class Ejercicio3 : MonoBehaviour
     {
         
     }
-    void Saludar(string name, int edad)
+    bool EsPar(int numero)
     {
-        print("Hola " + name + "tu edad es " + edad + " años");
+        bool esNumeroPar;
+
+        //Comprobar si es par ("%" devuelve el no de decimales si divido por 2
+        if (numero % 2 == 0)
+        {
+            esNumeroPar = true;
+        }
+        else
+        {
+            esNumeroPar = false;
+        }
+
+        return esNumeroPar;
     }
 }
 
