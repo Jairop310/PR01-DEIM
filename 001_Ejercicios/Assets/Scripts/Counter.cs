@@ -17,15 +17,12 @@ public class Counter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey("space"))
         {
             StartCoroutine("Cronometro");
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            StopCoroutine("Cronometro");
-        }
+        
     }
 
     IEnumerator Cronometro()
