@@ -24,13 +24,9 @@ public class Movimiento_2 : MonoBehaviour
 
         float desp1Y = Input.GetAxis("Vertical") * speed;
         transform.Translate(Vector3.up * desp1Y * Time.deltaTime);
-        if(PosX <= 12)
-        {
-            initPos = OtherObject.transform.position;
-            FinalPos = initPos + Destpos * Time.deltaTime * speed;
-            OtherObject.transform.position = FinalPos;
-        }
         float desp1X = Input.GetAxis("Horizontal") * speed;
         transform.Translate(Vector3.right * desp1X * Time.deltaTime);
+        float desp1Z = Input.GetAxis("Profundidad") * speed;
+        transform.Translate(Vector3.forward * desp1Z * Time.deltaTime);
     }
 }
