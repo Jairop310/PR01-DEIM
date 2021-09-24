@@ -6,20 +6,29 @@ using UnityEngine.UI;
 public class Counter : MonoBehaviour
 {
     [SerializeField] Text MyText;
+    bool ContadorEncendido;
 
     // Start is called before the first frame update
     void Start()
     {
        
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            StartCoroutine("Cronometro");
+            if (ContadorEncendido == false)
+            {
+                StartCoroutine("Cronometro");
+                ContadorEncendido = true;
+            }
+            else
+            {
+                StopCoroutine("Cronometro");
+                ContadorEncendido = false;
+            }
         }
 
         

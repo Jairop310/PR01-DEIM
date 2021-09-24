@@ -7,6 +7,7 @@ public class Bucles : MonoBehaviour
 
     float secundero = 0f;//No esta terminado.
     int aleatorio;
+    int nice;
 
     // Start is called before the first frame update
     void Start()
@@ -17,13 +18,19 @@ public class Bucles : MonoBehaviour
 
         while (aleatorio != 5)
         {
-            aleatorio = Random.Range(0, 2000);
+            aleatorio = Random.Range(0, 1000);
             if (aleatorio == 5)
             {
                 print("Ha salido el numero " + aleatorio);
-                print("Ha llegado " + fail + " numero de veces");
+                print("ha fallado" + fail);
                 StopCoroutine("Reloj");
                 print(("ha tardado: ") + secundero);
+                print("Han sido " + nice + " nice");
+            }
+            else if(aleatorio == 69)
+            {
+                nice++;
+                fail++;
             }
             else
             {
